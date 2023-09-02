@@ -11,11 +11,11 @@ export class MongoRepository implements IRepository {
   ) {}
 
   async insert(product: ProductInput): Promise<Product> {
-    return new Product('id', 'code', 'product 1', 'desc product 1', 1);
+    return new Product('code', 'product 1', 'desc product 1', 1);
   }
 
   async update(id: string, product: ProductInput): Promise<Product> {
-    return new Product('id', 'code', 'product 1', 'desc product 1', 1);
+    return new Product('code', 'product 1', 'desc product 1', 1);
   }
 
   async delete(id: string): Promise<boolean> {
@@ -23,11 +23,11 @@ export class MongoRepository implements IRepository {
   }
 
   async getById(id: string): Promise<Product> {
-    return new Product('id', 'code', 'product 1', 'desc product 1', 1);
+    return new Product('code', 'product 1', 'desc product 1', 1);
   }
 
   async getAll(): Promise<Product[]> {
-    const p = new Product('id', 'code', 'product 1', 'desc product 1', 1);
+    const p = new Product('code', 'product 1', 'desc product 1', 1);
     return [p, p, p]
   }
 }
