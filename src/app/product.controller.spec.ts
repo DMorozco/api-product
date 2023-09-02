@@ -14,6 +14,7 @@ describe('ProductController Unit testing', () => {
       controllers: [ProductController],
       providers: [ProductService, MongoRepository],
     }).compile();
+    
     controller = app.get<ProductController>(ProductController);
   });
 
