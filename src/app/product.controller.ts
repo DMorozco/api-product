@@ -14,7 +14,7 @@ export class ProductController {
 
   @Put(':id')
   async updateProduct(@Body() product: ProductInput, @Param() id: string): Promise<ProductResponse> {
-    return this.productService.updateProduct(id, product);
+    return this.productService.updateProduct(product, id);
   }
 
   @Delete(':id')

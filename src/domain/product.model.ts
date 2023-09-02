@@ -1,20 +1,20 @@
 import { Prop, Schema, SchemaFactory } from "@nestjs/mongoose";
 import { HydratedDocument } from "mongoose";
 
-export type CatDocument = HydratedDocument<Product>;
+export type ProductDocument = HydratedDocument<Product>;
 
 @Schema()
 export class Product {
-  @Prop()
+  @Prop({ type: String, required: true })
   code: string;
 
-  @Prop()
+  @Prop({ type: String, required: true })
   name: string;
 
-  @Prop()
+  @Prop({ type: String, required: true })
   description: string;
 
-  @Prop()
+  @Prop({ type: Number, required: true })
   price: number;
 
   constructor(code: string, name: string, description: string, price: number) {

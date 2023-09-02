@@ -15,7 +15,7 @@ export class ProductService {
     return new ProductResponse(HttpStatus.CREATED, [productResult]);
   }
 
-  async updateProduct(id: string, productInput: ProductInput): Promise<ProductResponse> {
+  async updateProduct(productInput: ProductInput, id: string): Promise<ProductResponse> {
     const productResult = await this.repository.update(id, productInput);
     return new ProductResponse(HttpStatus.OK, [productResult]);
   }
