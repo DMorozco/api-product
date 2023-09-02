@@ -13,7 +13,7 @@ export class ProductController {
   }
 
   @Put(':id')
-  async updateProduct(@Body() product: ProductInput, @Param() id): Promise<ProductResponse> {
+  async updateProduct(@Body() product: ProductInput, @Param() id: string): Promise<ProductResponse> {
     return this.productService.updateProduct(id, product);
   }
 
